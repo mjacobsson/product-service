@@ -14,11 +14,11 @@ products = [
     }
 ]
 
-@app.route('/', methods=['GET'])
+@app.route('/products', methods=['GET'])
 def get_products():
     return jsonify(products)
 
-@app.route('/<id>', methods=['GET'])
+@app.route('/products/<id>', methods=['GET'])
 def get_product(id):
     product = [p for p in products if p['id'] == int(id)]
     return jsonify(product[0])
