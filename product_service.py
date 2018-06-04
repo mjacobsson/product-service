@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 from flask import Flask, jsonify
 
 app = Flask(__name__)
@@ -24,4 +24,5 @@ def get_product(id):
     return jsonify(product[0])
 
 if __name__ == '__main__':
+    print('Product service listening on port 8007!')
     app.run(port=8007)
